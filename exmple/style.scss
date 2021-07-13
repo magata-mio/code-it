@@ -1,0 +1,279 @@
+body{
+    font-family: 'Montserrat',
+    sans-serif;
+}
+header {
+    .head-title {
+        .logo {
+            img {
+                width: 180px;
+            }
+        }
+
+        .contact {
+            .contact-list {
+                .contact-item {
+                    margin: 0 5px;
+
+                    a {
+                        text-decoration: none;
+
+                        .icon {
+                            width: 50px;
+                            font-size: 2rem;
+                            color: #dc4c2c;
+                        }
+
+                        .content {
+                            h6 {
+
+                                color: #475251;
+                            }
+
+                            p {
+                                color: #e5836e;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+nav.navbar {
+    .container {
+        .collapse {
+            .navbar-nav {
+                .nav-item {
+                    padding: 8px 10px;
+
+                    .nav-link {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #475251;
+
+                        &:hover {
+                            color: #dc4c2c;
+                        }
+                    }
+
+                    .nav-link.active {
+                        color: #dc4c2c;
+                    }
+                }
+
+                @media only screen and (max-width:992px) {
+                    .nav-item {
+                        padding: initial;
+
+                        .nav-link {
+                            font-size: initial;
+                            font-weight: initial;
+                        }
+                    }
+                }
+
+                .dropdown {
+                    display: block;
+
+                    &:hover .dropdown-menu {
+                        display: block;
+                    }
+
+                    .dropdown-menu {
+                        border: none;
+
+                        li {
+                            .dropdown-item {
+                                background-color: transparent;
+
+                                &:hover {
+                                    color: #dc4c2c;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 
+section.banner {
+    .carousel {
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    height: 100vh;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                @media only screen and (max-width:992px) {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.counter {
+    position: relative;
+    bottom: 50%;
+    transform: translateY(-50%);
+
+    .container {
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px rgb(174, 175, 175);
+        .row{
+            .box{
+                border-right: 1px solid lightsalmon;
+                &:last-child{
+                    border-right: none;
+                }
+                .icon{
+                    h1{
+                        font-size: 50px;
+                        font-weight: 700;
+                    }
+                }
+                .content{
+                    padding: 0 5px;
+                    line-height: 15px;
+                }
+            }
+            
+        }
+    }
+    
+}
+@media only screen and (max-width:992px) {
+    section.counter{
+        bottom: -10px;
+        transform: translateY(0);
+        .container{
+            border-radius: 0;
+            box-shadow: none;
+            .row{
+                .box{
+                    border: none;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+section.intro{
+    .container{
+        .row{
+            div{
+                p{
+                    letter-spacing: 5px;
+                    font-weight: 300;
+                }
+                h2{
+                    font-weight: 700;
+                    margin: 15px 0;
+                    color: #e5836e;
+                }
+                small{
+                    color: #475251;
+                }
+            }
+        }
+    }
+}
+section.our_team {
+    .container-fluid {
+        .team_card {
+            flex-wrap: wrap;
+
+            .team {
+                position: relative;
+                width: 300px;
+                height: 400px;
+                background: linear-gradient(#2196f3, #2196f3 30%, #1d3548 30%, #1d3548);
+                margin: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+
+                &:hover .imgBx {
+                    transform: translateY(30px) scale(0.5);
+                }
+
+                .imgBx {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: 0.5s;
+                    z-index: 111;
+                    transform-origin: top;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+                }
+
+                .content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding-bottom: 30px;
+
+                    .details {
+                        h2 {
+                            font-size: 1.2em;
+                            font-weight: 500;
+
+                            span {
+                                font-size: 0.8em;
+                                font-weight: 400;
+                                color: #03a9f4;
+                            }
+                        }
+
+                        .social_icons {
+                            margin-top: 5px;
+                            position: relative;
+
+                            li {
+                                margin: 4px;
+
+                                a {
+                                    width: 45px;
+                                    height: 45px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background: #294d69;
+                                    border-radius: 50%;
+                                    font-size: 1.5em;
+                                    text-decoration: none;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
