@@ -287,6 +287,29 @@ section.category {
     }
 }
 
+section.intro {
+    .container {
+        .row {
+            div {
+                p {
+                    letter-spacing: 5px;
+                    font-weight: 300;
+                }
+
+                h2 {
+                    font-weight: 700;
+                    margin: 15px 0;
+                    color: #e5836e;
+                }
+
+                small {
+                    color: #475251;
+                }
+            }
+        }
+    }
+}
+
 section.upcoming-course {
     .container {
         .item {
@@ -491,13 +514,11 @@ section.course {
 }
 
 section.our_team {
-    .container-fluid {
+    .container {
         .team_card {
-            flex-wrap: wrap;
-
             .team {
                 position: relative;
-                width: 300px;
+                flex-basis: 50%;
                 height: 400px;
                 background: linear-gradient(#2196f3, #2196f3 30%, #1d3548 30%, #1d3548);
                 margin: 10px;
@@ -577,32 +598,44 @@ section.our_team {
                     }
                 }
             }
+            .owl-nav {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: space-between;
+
+                button.owl-prev,
+                button.owl-next {
+                    display: block;
+                    background-color: $primary;
+                    width: 30px;
+                    height: 30px;
+                    font-size: 30px;
+                    color: $light-text;
+                    line-height: 30px;
+                    position: relative;
+                }
+
+                button.owl-prev {
+                    transform: translateX(-30px);
+                }
+
+                button.owl-next {
+                    transform: translateX(30px);
+                }
+            }  
+            @media only screen and (max-width:768px){
+                .owl-nav{
+                    display: none;
+                }
+            }  
         }
     }
 }
 
-section.intro {
-    .container {
-        .row {
-            div {
-                p {
-                    letter-spacing: 5px;
-                    font-weight: 300;
-                }
 
-                h2 {
-                    font-weight: 700;
-                    margin: 15px 0;
-                    color: #e5836e;
-                }
-
-                small {
-                    color: #475251;
-                }
-            }
-        }
-    }
-}
 
 section.gallery {
     .container {
@@ -680,7 +713,80 @@ section.blog {
         }
     }
 }
-
+section.testimonial{
+    .container{
+        .item{
+            .list{
+                .owl-carousel{
+                    position: relative;
+                    .item{
+                        flex-basis: 50%;
+                        margin: 5px 10px;
+                        text-align: center;
+                        .imgbx{
+                            padding: 15px 0;
+                            img{
+                                width: 120px;
+                                height: 120px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                                margin: auto;
+                            }
+                        }
+                        .content{
+                            .text{
+                                text-align: left;
+                                height: 120px;
+                                &::-webkit-scrollbar {
+                                    width: 3px;
+                                }
+                                &::-webkit-scrollbar-thumb {
+                                    background: rgb(224, 224, 221);
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                        .card-footer{
+                            .title{
+                                color: $primary-text;
+                            }
+                        }
+                    }
+                    .owl-nav{
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        display: flex;
+                        justify-content: space-between;
+                        button.owl-prev,
+                        button.owl-next{
+                            display: block;
+                            background-color: $primary;
+                            width: 30px;
+                            height: 30px;
+                            font-size: 30px;
+                            color: $light-text;
+                            line-height: 30px;
+                            position: relative;
+                        }
+                         button.owl-prev{
+                            transform: translateX(-30px);
+                         }
+                         button.owl-next {
+                             transform: translateX(30px);
+                         }
+                    }
+                    @media only screen and (max-width:768px) {
+                        .owl-nav {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 section.client {
     .container {
         .item {
@@ -839,11 +945,13 @@ footer {
                         font-size: 18px;
                         font-weight: 500;
                     }
-                    ul{
+
+                    ul {
                         list-style: none;
                         padding: 0;
                         display: flex;
-                        li{
+
+                        li {
                             margin-right: 5px;
                             width: 30px;
                             height: 30px;
@@ -851,10 +959,12 @@ footer {
                             text-align: center;
                             background-color: $primary;
                             border-radius: 50%;
-                            &:hover{
+
+                            &:hover {
                                 background-color: $primary-text;
                             }
-                            a{
+
+                            a {
                                 text-decoration: none;
                                 color: white;
                             }
@@ -862,15 +972,17 @@ footer {
                     }
                 }
             }
-            .pages{
-                a{
+
+            .pages {
+                a {
                     text-decoration: none;
                     color: black;
                     margin: 10px 0;
                 }
             }
-            .course{
-                a{
+
+            .course {
+                a {
                     text-decoration: none;
                     color: black;
                     margin: 10px 0;

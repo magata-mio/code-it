@@ -232,6 +232,21 @@ section.category .container .item .list div a .box p {
   }
 }
 
+section.intro .container .row div p {
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+
+section.intro .container .row div h2 {
+  font-weight: 700;
+  margin: 15px 0;
+  color: #e5836e;
+}
+
+section.intro .container .row div small {
+  color: #475251;
+}
+
 section.upcoming-course .container .item .list div {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -418,14 +433,10 @@ section.course .container .item .list div .box .content .manage .size {
   border-right: 1px solid lightgrey;
 }
 
-section.our_team .container-fluid .team_card {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-section.our_team .container-fluid .team_card .team {
+section.our_team .container .team_card .team {
   position: relative;
-  width: 300px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   height: 400px;
   background: -webkit-gradient(linear, left top, left bottom, from(#2196f3), color-stop(30%, #2196f3), color-stop(30%, #1d3548), to(#1d3548));
   background: linear-gradient(#2196f3, #2196f3 30%, #1d3548 30%, #1d3548);
@@ -434,12 +445,12 @@ section.our_team .container-fluid .team_card .team {
   overflow: hidden;
 }
 
-section.our_team .container-fluid .team_card .team:hover .imgBx {
+section.our_team .container .team_card .team:hover .imgBx {
   -webkit-transform: translateY(30px) scale(0.5);
           transform: translateY(30px) scale(0.5);
 }
 
-section.our_team .container-fluid .team_card .team .imgBx {
+section.our_team .container .team_card .team .imgBx {
   position: absolute;
   top: 0;
   left: 0;
@@ -452,7 +463,7 @@ section.our_team .container-fluid .team_card .team .imgBx {
           transform-origin: top;
 }
 
-section.our_team .container-fluid .team_card .team .imgBx img {
+section.our_team .container .team_card .team .imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -463,7 +474,7 @@ section.our_team .container-fluid .team_card .team .imgBx img {
   border-radius: 10px;
 }
 
-section.our_team .container-fluid .team_card .team .content {
+section.our_team .container .team_card .team .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -472,27 +483,27 @@ section.our_team .container-fluid .team_card .team .content {
   padding-bottom: 30px;
 }
 
-section.our_team .container-fluid .team_card .team .content .details h2 {
+section.our_team .container .team_card .team .content .details h2 {
   font-size: 1.2em;
   font-weight: 500;
 }
 
-section.our_team .container-fluid .team_card .team .content .details h2 span {
+section.our_team .container .team_card .team .content .details h2 span {
   font-size: 0.8em;
   font-weight: 400;
   color: #03a9f4;
 }
 
-section.our_team .container-fluid .team_card .team .content .details .social_icons {
+section.our_team .container .team_card .team .content .details .social_icons {
   margin-top: 5px;
   position: relative;
 }
 
-section.our_team .container-fluid .team_card .team .content .details .social_icons li {
+section.our_team .container .team_card .team .content .details .social_icons li {
   margin: 4px;
 }
 
-section.our_team .container-fluid .team_card .team .content .details .social_icons li a {
+section.our_team .container .team_card .team .content .details .social_icons li a {
   width: 45px;
   height: 45px;
   display: -webkit-box;
@@ -511,23 +522,50 @@ section.our_team .container-fluid .team_card .team .content .details .social_ico
   color: white;
 }
 
-section.our_team .container-fluid .team_card .team .content .details .social_icons li a:hover {
+section.our_team .container .team_card .team .content .details .social_icons li a:hover {
   background: #2196f3;
 }
 
-section.intro .container .row div p {
-  letter-spacing: 5px;
-  font-weight: 300;
+section.our_team .container .team_card .owl-nav {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-section.intro .container .row div h2 {
-  font-weight: 700;
-  margin: 15px 0;
-  color: #e5836e;
+section.our_team .container .team_card .owl-nav button.owl-prev,
+section.our_team .container .team_card .owl-nav button.owl-next {
+  display: block;
+  background-color: #294d69;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 30px;
+  position: relative;
 }
 
-section.intro .container .row div small {
-  color: #475251;
+section.our_team .container .team_card .owl-nav button.owl-prev {
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+section.our_team .container .team_card .owl-nav button.owl-next {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+@media only screen and (max-width: 768px) {
+  section.our_team .container .team_card .owl-nav {
+    display: none;
+  }
 }
 
 section.gallery .container .item .list {
@@ -594,6 +632,90 @@ section.blog .container .item .list div .box .content .more:hover {
 
 section.blog .container .item .list div .box .card-footer {
   border-radius: 0 0 10px 10px;
+}
+
+section.testimonial .container .item .list .owl-carousel {
+  position: relative;
+}
+
+section.testimonial .container .item .list .owl-carousel .item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+section.testimonial .container .item .list .owl-carousel .item .imgbx {
+  padding: 15px 0;
+}
+
+section.testimonial .container .item .list .owl-carousel .item .imgbx img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+}
+
+section.testimonial .container .item .list .owl-carousel .item .content .text {
+  text-align: left;
+  height: 120px;
+}
+
+section.testimonial .container .item .list .owl-carousel .item .content .text::-webkit-scrollbar {
+  width: 3px;
+}
+
+section.testimonial .container .item .list .owl-carousel .item .content .text::-webkit-scrollbar-thumb {
+  background: #e0e0dd;
+  border-radius: 10px;
+}
+
+section.testimonial .container .item .list .owl-carousel .item .card-footer .title {
+  color: #dc4c2c;
+}
+
+section.testimonial .container .item .list .owl-carousel .owl-nav {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.testimonial .container .item .list .owl-carousel .owl-nav button.owl-prev,
+section.testimonial .container .item .list .owl-carousel .owl-nav button.owl-next {
+  display: block;
+  background-color: #294d69;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 30px;
+  position: relative;
+}
+
+section.testimonial .container .item .list .owl-carousel .owl-nav button.owl-prev {
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+section.testimonial .container .item .list .owl-carousel .owl-nav button.owl-next {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+@media only screen and (max-width: 768px) {
+  section.testimonial .container .item .list .owl-carousel .owl-nav {
+    display: none;
+  }
 }
 
 section.client .container .item .list .owl-carousel .item {
